@@ -313,3 +313,118 @@ body {
 .stat-card a:hover {
     text-decoration: underline;
 }
+
+/* ===== Dashboard polish (lab assistant, reusable for all panels) ===== */
+/* ===== Dashboard polish (lab assistant, reusable for all panels) ===== */
+.section-title {
+    font-size: 18px;
+    color: #111827;
+    margin-top: 32px;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.stat-card {
+    border-top: 4px solid #2563eb;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card.accent-amber { border-top-color: #f59e0b; }
+.stat-card.accent-amber h3 { color: #d97706; }
+
+.stat-card.accent-green { border-top-color: #10b981; }
+.stat-card.accent-green h3 { color: #059669; }
+
+.stat-card.accent-blue { border-top-color: #2563eb; }
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #fff;
+    padding: 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #111827;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid transparent;
+    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+    border-color: #2563eb;
+    box-shadow: 0 10px 24px rgba(37,99,235,0.15);
+}
+
+.action-icon {
+    font-size: 28px;
+}
+
+.action-card strong {
+    font-size: 15px;
+}
+
+.action-card small {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.table-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-top: 16px;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 14px 18px;
+    background: #f9fafb;
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.data-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.empty-row {
+    text-align: center;
+    color: #9ca3af;
+    padding: 28px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-pending  { background: #fef3c7; color: #b45309; }
+.badge-approved { background: #d1fae5; color: #047857; }
+.badge-rejected { background: #fee2e2; color: #b91c1c; }
